@@ -14,7 +14,7 @@
             var flujo  = row.getAttribute('data-flujo');
             var showSite   = (currentSite   === 'TODOS' || site   === currentSite);
             var showEstado = (currentEstado === 'TODOS' || estado === currentEstado);
-            var showFlujo  = (currentFlujo  === 'TODOS' || flujo.indexOf(currentFlujo) >= 0);
+            var showFlujo  = (currentFlujo  === 'TODOS' || flujo.trim().indexOf(currentFlujo.trim()) >= 0);
             row.style.display = (showSite && showEstado && showFlujo) ? '' : 'none';
         });
     }
